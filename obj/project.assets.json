@@ -1220,11 +1220,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Console\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectUniqueName": "C:\\Git\\WinForms\\Task_27\\WinFormsApp1.csproj",
       "projectName": "WinFormsApp1",
-      "projectPath": "C:\\Projects\\Console\\WinFormsApp1\\WinFormsApp1.csproj",
+      "projectPath": "C:\\Git\\WinForms\\Task_27\\WinFormsApp1.csproj",
       "packagesPath": "C:\\Users\\Letna\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Console\\WinFormsApp1\\obj\\",
+      "outputPath": "C:\\Git\\WinForms\\Task_27\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Letna\\AppData\\Roaming\\NuGet\\NuGet.Config"

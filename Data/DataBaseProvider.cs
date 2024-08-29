@@ -1,14 +1,13 @@
 ﻿using System.Data;
 using System.Data.SQLite;
 using System.Reflection;
-using WindowsFormsApp1;
-using WinFormsApp1.Domain;
-using WinFormsApp1.Exceptions;
-using FileNotFoundException = WinFormsApp1.Exceptions.FileNotFoundException;
+using WinFormsApp1.Domain.Models;
+using WinFormsApp1.Infrastructure.Interfaces.Systems;
+using FileNotFoundException = WinFormsApp1.Data.Exceptions.FileNotFoundException;
 
 namespace WinFormsApp1.Data;
 
-public class DataBaseProvider : IDataBaseProvider
+public class DataBaseProvider
 {
     private readonly IHashSystem _hashSystem;
     private readonly string _dataBasePath;
@@ -22,12 +21,12 @@ public class DataBaseProvider : IDataBaseProvider
         _dataBasePath = dataBasePath;
     }
 
-    public Citizen FindCitizen(Passport passport)
+    public DataTable FindCitizenData(Passport passport)
     {
         try
         {
             string commandText = string.Format
-                ("select * from passports where num='{0}' limit 1;", _hashSystem.ComputeHash(passport.Id));
+                ("select * from passports where num='{0}' limit 1;", _hashSystem.ComputeHash(passport.SerialNumber));
 
             string connectionString = string.Format(
                 $"Data Source={Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location)}\\{_dataBasePath}");
@@ -39,15 +38,10 @@ public class DataBaseProvider : IDataBaseProvider
             SQLiteDataAdapter sqLiteDataAdapter =
                 new SQLiteDataAdapter(new SQLiteCommand(commandText, connection));
 
-            DataTable dataTable = new DataTable();
-            sqLiteDataAdapter.Fill(dataTable);
-
-            bool isAccessAvailable = Convert.ToBoolean(dataTable.Rows[0].ItemArray[1]);
-
-            if (isAccessAvailable)
-                throw new PassportNotFoundException();
-
-            return new Citizen(isAccessAvailable ? "ПРЕДОСТАВЛЕН" : "НЕ ПРЕДОСТАВЛЯЛСЯ");
+            DataTable citizenDataTable = new DataTable();
+            sqLiteDataAdapter.Fill(citizenDataTable);
+            
+            return citizenDataTable;
         }
         catch (SQLiteException sqLiteException)
         {

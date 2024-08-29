@@ -13,7 +13,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="UI\VoteCheckerView.cs">
+      <Compile Update="UI\Views\Forms\VoteCheckers\VoteCheckerForm.cs">
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>

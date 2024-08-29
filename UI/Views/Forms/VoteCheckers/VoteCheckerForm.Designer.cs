@@ -1,6 +1,6 @@
-﻿namespace WinFormsApp1.UI
+﻿namespace WinFormsApp1.UI.Views.Forms.VoteCheckers
 {
-    partial class VoteCheckerView
+    partial class VoteCheckerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -86,7 +86,7 @@
             this.Controls.Add(this._textResult);
             this.Controls.Add(this._inputText);
             this.Controls.Add(this._passportTextbox);
-            this.Name = "VoteCheckerView";
+            this.Name = "VoteCheckerForm";
             this.Text = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();

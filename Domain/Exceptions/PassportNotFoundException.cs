@@ -1,3 +1,3 @@
-﻿namespace WinFormsApp1.Exceptions;
+﻿namespace WinFormsApp1.Domain.Exceptions;
 
 public class PassportNotFoundException : Exception { }

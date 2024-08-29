@@ -28,3 +28,12 @@ C:\Projects\Console\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\unix\lib\netc
 C:\Projects\Console\WinFormsApp1\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Projects\Console\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
 C:\Projects\Console\WinFormsApp1\obj\Debug\net8.0-windows\WinFormsApp1.csproj.CopyComplete
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.csproj.AssemblyReference.cache
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfoInputs.cache
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.AssemblyInfo.cs
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.csproj.CoreCompileInputs.cache
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.sourcelink.json
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.dll
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\refint\WinFormsApp1.dll
+C:\Git\WinForms\Task_27\obj\Debug\net8.0-windows\WinFormsApp1.pdb

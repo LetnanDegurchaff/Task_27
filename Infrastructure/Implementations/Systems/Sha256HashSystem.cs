@@ -1,8 +1,8 @@
 ﻿using System.Security.Cryptography;
 using System.Text;
-using WindowsFormsApp1;
+using WinFormsApp1.Infrastructure.Interfaces.Systems;
 
-namespace WinFormsApp1.Domain.Services;
+namespace WinFormsApp1.Infrastructure.Implementations.Systems;
 
 public class Sha256HashSystem : IHashSystem
 {

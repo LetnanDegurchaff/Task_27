@@ -1,20 +1,16 @@
 ﻿using WinFormsApp1.Domain;
-using WinFormsApp1.UI.Interfaces;
+using WinFormsApp1.UI.Presenters.VoteCheckers;
 
-namespace WinFormsApp1.UI
+namespace WinFormsApp1.UI.Views.Forms.VoteCheckers
 {
-    public partial class VoteCheckerView : Form, IVoteCheckerView
+    public partial class VoteCheckerForm : Form, IVoteCheckerView
     {
-        private IVoteCheckerPresenter _voteCheckerPresenter;
+        private VoteCheckerPresenter _voteCheckerPresenter;
 
-        public VoteCheckerView()
+        public VoteCheckerForm(IVoteCheckerPresenterFactory voteCheckerPresenterFactory)
         {
+            _voteCheckerPresenter = voteCheckerPresenterFactory?.Create(this) ?? throw new ArgumentNullException();
             InitializeComponent();
-        }
-
-        public void InitPresenter(IVoteCheckerPresenter voteCheckerPresenter)
-        {
-            _voteCheckerPresenter = voteCheckerPresenter ?? throw new ArgumentNullException();
         }
 
         public void ShowPassportNotFoundError(string passportId)
@@ -26,10 +22,10 @@ namespace WinFormsApp1.UI
                 $"Паспорт «{passportId}» в списке участников дистанционного голосования НЕ НАЙДЕН";
         }
 
-        public void ShowVoteAccess(string passportId, Citizen citizen)
+        public void ShowVoteAccess(string passportId, string voteAccess)
         {
             _textResult.Text =
-                $"По паспорту «{passportId}» {citizen.VoteAccessStatus}";
+                $"По паспорту «{passportId}» {voteAccess}";
         }
 
         public void ShowFileNotFoundError(string filePath)
@@ -44,15 +40,12 @@ namespace WinFormsApp1.UI
         
         private void CheckButton_Click(object sender, EventArgs eventArgs)
         {
-            try
-            {
-                _voteCheckerPresenter.ShowVoteInfo(_passportTextbox.Text
-                    .Trim().Replace(" ", string.Empty));
-            }
-            catch (ArgumentNullException exception)
-            {
-                _textResult.Text = "Введите серию и номер паспорта";
-            }
+            _voteCheckerPresenter.ShowVoteInfo(_passportTextbox.Text);
+        }
+        
+        public void ShowNullInputError()
+        {
+            MessageBox.Show("Введите серию и номер паспорта");
         }
     }
 }

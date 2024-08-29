@@ -1,4 +1,4 @@
-﻿namespace WinFormsApp1.Exceptions;
+﻿namespace WinFormsApp1.Data.Exceptions;
 
 public class FileNotFoundException : Exception
 {

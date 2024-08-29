@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5t6WFeYzxF8BX8LbndF++KY0WUXyrx24S81fitkHUXaADWmFieJr963cT6Xdp4sYTkMWERrdDfiXzkYUQnMIhg==",
+  "dgSpecHash": "PPIFVs9A7v3UapXgheu8QPZEIk4qXERifoLAYdB5NYSjcv8LqKxvH7N6rkCEmtDuQIU0xRqu+vHuM7Z4gp1KJg==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Console\\WinFormsApp1\\WinFormsApp1.csproj",
+  "projectFilePath": "C:\\Git\\WinForms\\Task_27\\WinFormsApp1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Letna\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Letna\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

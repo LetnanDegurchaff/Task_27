@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1;
+﻿namespace WinFormsApp1.Infrastructure.Interfaces.Systems;
 
 public interface IHashSystem
 {
